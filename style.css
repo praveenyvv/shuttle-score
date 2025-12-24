@@ -62,25 +62,21 @@ button:hover {
 
 .scoreboard {
   display: flex;
-  gap: 180px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  gap: 100px;
 }
-
 
 .team {
   text-align: center;
 }
 
 .team h2 {
-  font-size: 8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .score {
-  font-size: 15rem;
-  margin-bottom: 40px;
+  font-size: 6rem;
+  margin-bottom: 30px;
 }
 
 .controls button {
