@@ -20,6 +20,27 @@
 
   <!-- Game Screen -->
   <div id="gameScreen" class="screen">
+
+    <!-- Game Point Display & Controls -->
+    <div class="game-point-panel">
+      <div class="game-point-text">
+        GAME POINT: <span id="gamePointDisplay">0</span>
+      </div>
+
+      <div class="game-point-buttons">
+        <button onclick="increaseGamePoint(1)">+1</button>
+        <button onclick="increaseGamePoint(2)">+2</button>
+        <button onclick="increaseGamePoint(5)">+5</button>
+      </div>
+
+      <!-- Reset button -->
+      <div style="margin-top: 20px;">
+        <button onclick="confirmReset()" style="background:#ef4444;color:white;">
+          Reset Game
+        </button>
+      </div>
+    </div>
+
     <div class="scoreboard">
 
       <div class="team">
