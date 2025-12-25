@@ -9,6 +9,7 @@ const winnerScreen = document.getElementById("winnerScreen");
 const score1El = document.getElementById("score1");
 const score2El = document.getElementById("score2");
 const winnerText = document.getElementById("winnerText");
+const gamePointDisplay = document.getElementById("gamePointDisplay");
 
 document.getElementById("startGameBtn").addEventListener("click", () => {
   const input = document.getElementById("gamePointInput").value;
@@ -24,6 +25,7 @@ document.getElementById("startGameBtn").addEventListener("click", () => {
 
   score1El.textContent = 0;
   score2El.textContent = 0;
+  gamePointDisplay.textContent = gamePoint;
 
   setupScreen.classList.remove("active");
   gameScreen.classList.add("active");
@@ -53,6 +55,22 @@ function changeScore(team, value) {
   }
 }
 
+function increaseGamePoint(value) {
+  gamePoint += value;
+  gamePointDisplay.textContent = gamePoint;
+}
+
+/* 🔴 NEW: Reset confirmation */
+function confirmReset() {
+  const confirmAction = confirm(
+    "Are you sure you want to reset the game?\nAll current scores will be lost."
+  );
+
+  if (confirmAction) {
+    resetToSetup();
+  }
+}
+
 function showWinner(text) {
   gameScreen.classList.remove("active");
   winnerText.textContent = text;
@@ -60,6 +78,15 @@ function showWinner(text) {
 }
 
 function resetGame() {
+  resetToSetup();
+}
+
+function resetToSetup() {
   winnerScreen.classList.remove("active");
+  gameScreen.classList.remove("active");
   setupScreen.classList.add("active");
+
+  score1 = 0;
+  score2 = 0;
+  gamePoint = 0;
 }
