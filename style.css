@@ -98,3 +98,23 @@ button:hover {
     transform: scale(1.1);
   }
 }
+
+/* existing CSS remains same */
+
+.game-point-panel {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.game-point-text {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.game-point-buttons button {
+  margin: 0 8px;
+  padding: 10px 22px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
